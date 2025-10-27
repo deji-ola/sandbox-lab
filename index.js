@@ -1,1 +1,11 @@
-console.log("🚀 Sandbox Lab Node.js app is running!");
+const express = require('express');
+const app = express();
+const port = 3000;
+
+app.get('/', (req, res) => {
+  res.send('🚀 Sandbox Lab Express server is running!');
+});
+
+app.listen(port, () => {
+  console.log(`Server listening at http://localhost:${port}`);
+});
